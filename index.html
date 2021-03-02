@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conteo</title>
+	<link rel="stylesheet" type="text/css" href="es.css">
+	<script>
+		i=10;
+	</script>
+</head>
+<body onload="hola();">
+	<div id="div"></div>
+	<script>
+		function hola()
+		{
+			document.getElementById("div").innerHTML="Hola";
+			setTimeout(conteo,5000);
+		}
+
+		function conteo()
+		{
+			j=setInterval(resta,1000);
+		}
+
+		function resta()
+		{
+			document.getElementById("div").innerHTML=i;
+			i=i-1;
+			if (i==-2)
+			{
+				clearInterval(j);
+				document.getElementById("div").innerHTML="Fin";
+			}
+		}
+	</script>
+</body>
+</html>
